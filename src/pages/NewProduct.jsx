@@ -20,13 +20,13 @@ export default function NewProduct() {
   }
   const handleSubmit = (e) =>{
     e.preventDefault();
-    setIsUploading(true);
+    setIsUploading(true); 
     uploadImage(file)
     .then(url => {
         addProduct.mutate({product, url}, {onSuccess:() => {
         setSuccess("성공적으로 제품을 등록했습니다.")
         setTimeout(() => {
-        setSuccess(null);
+        setSuccess(null); 
       }, 4000);
       }})
     })
@@ -86,7 +86,7 @@ export default function NewProduct() {
           placeholder='옵션들(콤마(,)로 구분)'
           onChange={handleChange}
         />
-        <Button text={isUploading ? "업로드 중..." : "제품 등록하기"} disabled={isUploading}/>
+        <Button text={isUploading ? "업로드 중..." : "제품 등록하기"} disabled={isUploading}/> 
       </form>
     </section>
   );
