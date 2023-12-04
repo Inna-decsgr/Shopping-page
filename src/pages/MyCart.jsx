@@ -49,7 +49,7 @@ export default function MyCart() {
           <PriceCard text="총 가격" price={totalPrice >= FREE_SHIPPING ? PRICE : (totalPrice + SHIPPING).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}/>
         </div>
         <p className='text-lg my-4 px-2 font-semibold'>* 80,000원 이상 구매시 배송비 무료입니다. (기본 배송료 2,500원)</p>
-        <Button text='주문하기' onClick={() => {navigate('/products/order')}}/>
+        <Button text='주문하기'/>
       </>}
     </section>
   );
