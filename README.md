@@ -26,7 +26,7 @@
 
 #### Admin 계정 제품 등록
 * 새로운 제품 등록
-<img src="https://github.com/Inna-decsgr/Shopping-page/assets/145058119/909cd7d8-25ca-486d-9799-6bca39aef31d">
+<img src="https://github.com/Inna-decsgr/Shopping-page/assets/145058119/4c7757ac-09ed-4115-8418-688b16e70de1">
 
 #### 문제 해결
 * 어떤 상품을 검색하고 나서 이전에 검색했던 상품으로 돌아가려고 이전 버튼을 클릭하면 url의 keyword와 검색창의 검색어가 일치하지 않았고 페이지의 로고를 누르면 루트 경로로 이동하면서 검색어창이 비워져야하는데 이 또한 작동하지 않았다.
