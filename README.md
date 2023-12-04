@@ -1,5 +1,5 @@
 #### 프로젝트 이름
-간단한 쇼핑 사이트
+쇼핑 사이트
 
 #### 사용 언어
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/React Router-CA4245?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/React Query-FF4154?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=javascript&logoColor=black">
@@ -25,7 +25,8 @@
 * `useProducts`, `useCarts`, `useLike`와 같이 커스텀 훅을 만들어서 데이터를 fetching하는 모든 코드들을 UI 컴포넌트 코드들로부터 분리하고, queryKey를 사용하는 곳을 한 군데로 정해서 그 곳에서만 관리, 유지보수 또는 invalidateCache를 할 수 있도록 한다.
 
 #### Admin 계정 제품 등록
-
+* 새로운 제품 등록
+<img src="https://github.com/Inna-decsgr/Shopping-page/assets/145058119/909cd7d8-25ca-486d-9799-6bca39aef31d">
 
 #### 문제 해결
 * 어떤 상품을 검색하고 나서 이전에 검색했던 상품으로 돌아가려고 이전 버튼을 클릭하면 url의 keyword와 검색창의 검색어가 일치하지 않았고 페이지의 로고를 누르면 루트 경로로 이동하면서 검색어창이 비워져야하는데 이 또한 작동하지 않았다.
