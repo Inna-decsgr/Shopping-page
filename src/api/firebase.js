@@ -15,6 +15,10 @@ const provider = new GoogleAuthProvider();// 앱이 초기화가 되면 getAuth�
 const auth = getAuth();
 const database = getDatabase(app); // 초기화
 
+provider.setCustomParameters({
+  prompt: "select_account",
+});
+
 export function login(){
   return signInWithPopup(auth, provider)
   .catch(console.error);
