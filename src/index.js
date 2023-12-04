@@ -11,7 +11,6 @@ import NewProduct from './pages/NewProduct';
 import ProductDetail from './pages/ProductDetail';
 import MyCart from './pages/MyCart';
 import ProtectedRoute from './pages/ProtectedRoute';
-import Order from './pages/Order';
 import Like from './pages/Like';
 import Search from './pages/Search';
 
