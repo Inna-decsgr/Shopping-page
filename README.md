@@ -39,4 +39,4 @@
 
  
 #### 배포 링크📌
- https://radiant-puffpuff-63b6f2.netlify.app
+https://grand-dieffenbachia-b04f24.netlify.app
