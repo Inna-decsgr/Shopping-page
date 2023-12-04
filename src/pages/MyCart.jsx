@@ -6,7 +6,6 @@ import {FaEquals} from 'react-icons/fa';
 import Button from '../components/ui/Button';
 import useCarts from '../hooks/useCart';
 import {Link} from 'react-router-dom';
-import {useNavigate} from 'react-router-dom';
 
 const SHIPPING = 2500;
 const FREE_SHIPPING = 80000;
@@ -14,7 +13,6 @@ const FREE_SHIPPING = 80000;
 
 export default function MyCart() {
   const {cartQuery:{isLoading, data:products}} = useCarts();
-  const navigate = useNavigate();
 
   if(isLoading) return (<>
     {isLoading && <section className='px-4 mt-10 text-center text-xl font-bold'>
