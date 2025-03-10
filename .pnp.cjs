@@ -39,6 +39,7 @@ const RAW_RUNTIME_STATE =
           ["react-icons", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:4.12.0"],\
           ["react-router-dom", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:6.19.0"],\
           ["react-scripts", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:5.0.1"],\
+          ["swiper", "npm:11.2.5"],\
           ["tailwindcss", "npm:3.3.5"],\
           ["uuid", "npm:9.0.1"],\
           ["web-vitals", "npm:2.1.4"]\
@@ -17372,6 +17373,7 @@ const RAW_RUNTIME_STATE =
           ["react-icons", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:4.12.0"],\
           ["react-router-dom", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:6.19.0"],\
           ["react-scripts", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:5.0.1"],\
+          ["swiper", "npm:11.2.5"],\
           ["tailwindcss", "npm:3.3.5"],\
           ["uuid", "npm:9.0.1"],\
           ["web-vitals", "npm:2.1.4"]\
@@ -18030,6 +18032,15 @@ const RAW_RUNTIME_STATE =
           ["csso", "npm:4.2.0"],\
           ["picocolors", "npm:1.0.0"],\
           ["stable", "npm:0.1.8"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["swiper", [\
+      ["npm:11.2.5", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/swiper-npm-11.2.5-14ada903c9-10c0.zip/node_modules/swiper/",\
+        "packageDependencies": [\
+          ["swiper", "npm:11.2.5"]\
         ],\
         "linkType": "HARD"\
       }]\
