@@ -20,6 +20,15 @@ code {
     monospace;
 }
 
-input {
-  @apply p-4 outline-none border border-gray-300 my-1
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet  {
+  width: 100px;
+  background-color: white;
+  border-radius: 0px;
+  height: 5px;
 }
