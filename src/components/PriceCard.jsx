@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function PriceCard({text, price}) {
   return (
-    <div className='bg-gray-100 p-8 mx-2 rounded-2xl text-center text-lg md:text-xl'>
-      <p>{text}</p>
-      <p className='font-bold text-brand text-xl md:text-2xl'>
-        {price === "무료" ? price : `₩${price}`}
+    <div className='border-y my-3 border-gray-500 w-full py-8'>
+      <p className='text-left'>{text}</p>
+      <p className='font-bold text-lg text-right'>
+        {price === "0원" ? price : `${price}원`}
       </p>
     </div>
   );
