@@ -1,6 +1,6 @@
 export default function Footer() { 
   return (
-    <div className='p-5'>
+    <div className='p-5 mt-[120px]'>
       <div className='flex text-sm justify-between items-center pb-5'>
         <div className='flex gap-4'>
           <p>문의하기</p>
