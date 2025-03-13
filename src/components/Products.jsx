@@ -6,7 +6,7 @@ export default function Products() {
   const {productsQuery:{isLoading, error, data:products}} = useProduct();
 
   return (
-    <>
+    <div className='mt-[120px]'>
       {isLoading && <section className='px-4 mt-10 text-center text-xl font-bold'>
         <p>로딩중..</p>
         <p>이 작업은 최대 1분까지 소요될 수 있어요.</p>
@@ -15,7 +15,7 @@ export default function Products() {
       {products && <ul className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4'>
         {products && products.map(product => <ProductCard key={product.id} product={product}/>)}  
       </ul>}
-    </>
+    </div>
   );
 }
 
