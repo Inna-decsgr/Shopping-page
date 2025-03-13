@@ -8,6 +8,7 @@ import { useAuthContext } from '../context/AuthContext';
 import Button from './ui/Button';
 import CartStatus from './CartStatus';
 
+
 export default function Navbar() {
   const {user, login, logout} = useAuthContext();
   const [text, setText] = useState('');
@@ -45,13 +46,13 @@ export default function Navbar() {
       <nav className={`fixed top-0 left-0 w-full flex z-[100] bg-white shadow-md items-center justify-between py-6 px-10`}>
         <div className='flex items-center gap-x-6 w-[200px]'>
           <Link to='/products' className="pr-3">SHOP</Link>
-          <p>ABOUT</p>
+          <button onClick={showSearchBar}>SEARCH</button>
         </div>
         <div>
           <Link to='/' className='font-bold text-4xl'>shopsite</Link>
         </div>
         <div className='flex items-center gap-x-4 w-[200px]'>
-          {user && <button onClick={showSearchBar}>SEARCH</button>}
+          {user && <Link to='/products/like'>Like</Link>}
           {user && <Link to='/carts'><CartStatus /></Link>}
           <div className='hidden'>
             {user && <Link to='/products/like'><FaHeart className='text-2xl ml-2'/></Link>}
