@@ -34,16 +34,17 @@ export default function NewProduct() {
   }
 
   return (
-    <section className='w-full text-center'>
-      <h2 className='text-2xl font-bold my-4'>새로운 제품 등록</h2>
+    <section className='w-full p-12 mt-[120px]'>
+      <p className='mb-5 pb-3'>새 제품 등록</p>
       {success && <p className='my-2'>✅{success}</p>}
-      {file && <img className='w-96 mx-auto mb-2' src={URL.createObjectURL(file)} alt='local file'/>}
-      <form className='flex flex-col px-12' onSubmit={handleSubmit}>
+      {file && <img className='w-[500px] mx-auto mb-3' src={URL.createObjectURL(file)} alt='local file'/>}
+      <form className='flex flex-col px-12 pt-5 pb-8 border-y border-gray-500' onSubmit={handleSubmit}>
         <input 
           type="file"
           accept='image/*'
           required
           name='file'
+          className='border p-2 mb-3 rounded-md'
           onChange={handleChange}
         />
         <input 
@@ -52,6 +53,7 @@ export default function NewProduct() {
           required
           value={product.title ?? ''}
           placeholder='제품명'
+          className='border p-2 rounded-md mb-2'
           onChange={handleChange}
         />
         <input 
@@ -60,6 +62,7 @@ export default function NewProduct() {
           required
           value={product.price ?? ''}
           placeholder='가격'
+          className='border p-2 rounded-md mb-2'
           onChange={handleChange}
         />
         <input 
@@ -68,6 +71,7 @@ export default function NewProduct() {
           required
           value={product.category ?? ''}
           placeholder='카테고리'
+          className='border p-2 rounded-md mb-2'
           onChange={handleChange}
         />
         <input 
@@ -76,6 +80,7 @@ export default function NewProduct() {
           required
           value={product.description ?? ''}
           placeholder='제품 설명'
+          className='border p-2 rounded-md mb-2'
           onChange={handleChange}
         />
         <input 
@@ -84,9 +89,10 @@ export default function NewProduct() {
           required
           value={product.options ?? ''}
           placeholder='옵션들(콤마(,)로 구분)'
+          className='border p-2 rounded-md mb-[50px]'
           onChange={handleChange}
         />
-        <Button text={isUploading ? "업로드 중..." : "제품 등록하기"} disabled={isUploading}/> 
+        <Button text={isUploading ? "업로드 중..." : "등록하기"} disabled={isUploading}/> 
       </form>
     </section>
   );
