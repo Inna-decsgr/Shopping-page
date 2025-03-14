@@ -10,8 +10,8 @@ export default function Search() {
   console.log(items);
 
   return (
-    <div className='mt-[120px]'>
-      <p className='my-6 text-lg font-bold ml-10'>'{keyword}' 로 검색한 결과</p>
+    <div className='mt-[120px] p-8'>
+      <p className='my-6 text-lg font-bold ml-10'>'{keyword}' 에 대한 검색결과 ({items?.length})</p>
       { items?.length === 0 && 
         <div className='text-lg text-center mt-20 text-gray-500'>
           <div className='text-sm pb-4'>
