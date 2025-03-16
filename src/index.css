@@ -28,7 +28,7 @@ code {
 
 .swiper-pagination-clickable .swiper-pagination-bullet  {
   width: 100px;
-  background-color: white;
+  background-color: black;
   border-radius: 0px;
-  height: 5px;
+  height: 3px;
 }
