@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {Link, useNavigate, useParams} from 'react-router-dom';
-import { FaPencilAlt, FaHeart } from "react-icons/fa";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
 import User from './User';
@@ -49,25 +48,19 @@ export default function Navbar() {
           <button onClick={showSearchBar}>SEARCH</button>
         </div>
         <div>
-          <Link to='/' className='font-bold text-4xl'>shopsite</Link>
+          <Link to='/' className='font-bold text-4xl pl-[85px]'>shopsite</Link>
         </div>
-        <div className='flex items-center gap-x-4 w-[200px]'>
+        <div className='flex items-center gap-x-4 w-[280px]'>
           {user && <Link to='/products/like'>Like</Link>}
           {user && <Link to='/carts'><CartStatus /></Link>}
-          <div className='hidden'>
-            {user && <Link to='/products/like'><FaHeart className='text-2xl ml-2'/></Link>}
-            {user && user.isAdmin && (
-              <Link to='/products/new'>
-                <FaPencilAlt className='text-2xl'/>
-              </Link>
-              )}
-            {user && <User user={user}/>}
-          </div>
-          {!user ? (
-            <Button text={"Login"} onClick={login}/>
-          ) : (
+          {user && <User user={user} />}
+          <div className='absolute top-50% right-3'>
+            {!user ? (
+              <Button text={"Login"} onClick={login} />
+            ) : (
             <Button text={"Logout"} onClick={logout}/>
-          )}
+            )}
+          </div>
         </div>
       </nav>
       <div className={`fixed top-[89px] left-0 z-50 sm:w-[450px] md:w-[500px] lg:w-[550px] h-screen bg-[#d0deeb] p-[60px] transition-all duration-300 ease-in-out ${search ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full pointer-events-none'}`} onClick={(e) => e.stopPropagation()}>
