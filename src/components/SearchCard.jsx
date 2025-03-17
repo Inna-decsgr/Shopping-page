@@ -5,13 +5,13 @@ export default function SearchCard({item: {id, title, image, price, category, de
   const navigate = useNavigate();
 
   return (
-    <li className='rounded-lg overflow-hidden cursor-pointer shadow-md' onClick={() => {navigate(`/products/${id}`, {state:{product:{id, title, image, price, category, description, options}}})}}>
+    <li className='rounded-lg overflow-hidden cursor-pointer shadow-md mb-3' onClick={() => {navigate(`/products/${id}`, {state:{product:{id, title, image, price, category, description, options}}})}}>
       <img className='w-full' src={image} alt={title} />
-      <div className='flex justify-between items-center text-lg my-2 px-2'>
-        <h3 className='truncate'>{title}</h3>
-        <p>₩{price}</p>
+      <div className='p-3 text-center'>
+        <p className='truncate'>{title}</p>
+        <p className='pb-3 font-bold'>{price.toLocaleString()}</p>
+        <p className='text-sm text-gray-500'>{category}</p>
       </div>
-      <p className='px-2 mb-2'>{category}</p>
     </li>
   );
 }
