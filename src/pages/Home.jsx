@@ -1,12 +1,12 @@
 import React from 'react';
-import Banner from '../components/Banner';
-import AllProducts from './AllProducts';
+import MainSlider from '../components/MainSlider';
+import MainHome from '../components/MainHome';
 
 export default function Home() {
   return (
     <>
-      <Banner />
-      <AllProducts />
+      <MainSlider />
+      <MainHome />
     </>
   );
 }
