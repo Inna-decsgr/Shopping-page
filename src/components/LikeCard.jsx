@@ -1,4 +1,4 @@
-import React  from 'react';
+import React, { useEffect }  from 'react';
 import useLike from '../hooks/useLike';
 import {useNavigate} from 'react-router-dom';
 
@@ -6,8 +6,16 @@ export default function LikeCard({product, product:{id, title, image, price}}) {
   const {removeItemFromLike} = useLike();
   const navigate = useNavigate();
   const handleremoveLike =() => {
-    removeItemFromLike.mutate(id)
+    removeItemFromLike.mutate(id);
+
+    // 2️localStorage에서 `like-${id}` 삭제!
+    localStorage.removeItem(`like-${id}`);
+    
+    console.log(`like-${id} 삭제됨!`);
   }
+  useEffect(() => {
+    console.log('하트 상태', localStorage.getItem(`like-${id}`));
+  }, [id]); // `id`가 바뀔 때만 실행
 
 
   return (
