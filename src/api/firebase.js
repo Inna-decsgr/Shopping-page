@@ -29,12 +29,20 @@ export function logout(){
   .catch(console.error);
 }
 
+let previousUser = null; // 함수 밖에서 유지하여 상태 기억
+
 export async function onUserStateChange(callback) {
   onAuthStateChanged(auth, async (user) => {
+    if (JSON.stringify(user) === JSON.stringify(previousUser)) return; // 같은 상태면 업데이트 X
+    previousUser = user; // 현재 사용자 상태 업데이트
+
     const updatedUser = user ? await adminUser(user) : null;
     callback(updatedUser);
+
+    console.log('사용자 상태 변경:', user); // 정상 작동 확인
   });
 }
+
 
 export async function adminUser(user) { 
   return get(ref(database, 'admins'))  
