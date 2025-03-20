@@ -2,16 +2,19 @@ import React, { useState } from 'react';
 import Button from '../components/ui/Button';
 import {uploadImage} from '../api/uploader'
 import useProduct from '../hooks/useProducts';
+import {useNavigate} from 'react-router-dom';
+
 
 export default function NewProduct() {
   const [product, setProduct] = useState({});
   const [file, setFile] = useState();
   const [isUploading, setIsUploading] = useState(false);
-  const [success, setSuccess] = useState();
-  const {addProduct} = useProduct();
+  const { addProduct } = useProduct();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-    const {name, value, files} = e.target;
+    const { name, value, files } = e.target;
+
     if(name === 'file'){
       setFile(files && files[0]);
       return;
@@ -23,11 +26,10 @@ export default function NewProduct() {
     setIsUploading(true); 
     uploadImage(file)
     .then(url => {
-        addProduct.mutate({product, url}, {onSuccess:() => {
-        setSuccess("성공적으로 제품을 등록했습니다.")
-        setTimeout(() => {
-        setSuccess(null); 
-      }, 4000);
+      addProduct.mutate({ product, url }, {
+        onSuccess: () => {
+          alert('성공적으로 제품을 등록하였습니다.')
+          navigate(`/products`)
       }})
     })
     .finally(() => setIsUploading(false))
@@ -35,9 +37,8 @@ export default function NewProduct() {
 
   return (
     <section className='w-full p-12 mt-[120px]'>
-      <p className='mb-5 pb-3'>새 제품 등록</p>
-      {success && <p className='my-2'>✅{success}</p>}
-      {file && <img className='w-[500px] mx-auto mb-3' src={URL.createObjectURL(file)} alt='local file'/>}
+      <p className='mb-5 pb-3 font-bold'>새 제품 등록</p>
+      {file && <img className='w-[250px] mx-auto mb-[40px]' src={URL.createObjectURL(file)} alt='local file'/>}
       <form className='flex flex-col px-12 pt-5 pb-8 border-y border-gray-500' onSubmit={handleSubmit}>
         <input 
           type="file"
