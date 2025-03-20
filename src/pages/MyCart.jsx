@@ -1,11 +1,11 @@
 import React from 'react';
 import CartItem from '../components/CartItem';
 import PriceCard from '../components/PriceCard';
-import Button from '../components/ui/Button';
 import useCarts from '../hooks/useCart';
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext';
 import CartStatus from '../components/CartStatus';
+import Button from '../components/ui/Button';
 
 const SHIPPING = 2500;
 const FREE_SHIPPING = 80000;
@@ -55,7 +55,7 @@ export default function MyCart() {
           </div>
         </div>
         }
-        <button className='absolute left-[30%] w-[300px] border py-2 rounded-3xl border-gray-500 my-6'>전체상품주문</button>
+        {hasProducts && <button className='absolute left-[30%] w-[300px] border py-2 rounded-3xl border-gray-500 my-6'>전체상품주문</button>}
       </div>
     </section>
   );
