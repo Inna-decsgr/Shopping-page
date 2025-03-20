@@ -12,7 +12,7 @@ export default function Products() {
         <p>이 작업은 최대 1분까지 소요될 수 있어요.</p>
       </section>}
       {error && <p>{error}</p>}
-      {products && <ul className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4'>
+      {products && <ul className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 p-4 w-[1200px] mx-auto'>
         {products && products.map(product => <ProductCard key={product.id} product={product}/>)}  
       </ul>}
     </div>
